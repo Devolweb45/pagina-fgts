@@ -134,7 +134,7 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-lg opacity-90 mb-8 font-medium"
+            className="text-lg opacity-90 mb-8 font-medium text-center mx-auto max-w-2xl"
           >
             Atendimento personalizado para negativados e desempregados. Dinheiro na conta via PIX em até 30 minutos.
           </motion.p>
@@ -209,13 +209,14 @@ export default function App() {
               <label className="block text-sm font-semibold text-gray-600 mb-2">Qual seu saldo total no FGTS?</label>
               <div className="relative">
                 <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 font-bold">R$</span>
-                <input 
-                  type="number" 
-                  value={saldo}
-                  onChange={(e) => setSaldo(e.target.value)}
-                  placeholder="Ex: 5000" 
-                  className="w-full pl-12 pr-4 py-4 bg-gray-50 border-2 border-gray-100 rounded-2xl focus:border-orange outline-none transition-all text-xl font-bold"
-                />
+                  <input 
+                    type="number" 
+                    value={saldo}
+                    onChange={(e) => setSaldo(e.target.value)}
+                    placeholder="Ex: 5000" 
+                    min="0"
+                    className="w-full pl-12 pr-4 py-4 bg-gray-50 border-2 border-gray-100 rounded-2xl focus:border-orange outline-none transition-all text-xl font-bold"
+                  />
               </div>
             </div>
             <button 

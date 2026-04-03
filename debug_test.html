@@ -1,0 +1,520 @@
+<!-- LANDING PAGE MARCELO BRASIL - VERSÃO ABSOLUTA E BLINDADA PARA ELEMENTOR -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@0.294.0" onload="if(window.lucide) lucide.createIcons()"></script>
+
+<style>
+    /* RESET TOTAL PARA WORDPRESS */
+    #mb-landing-page { 
+        font-family: 'Inter', sans-serif !important; 
+        background-color: #ffffff !important; 
+        color: #111827 !important; 
+        line-height: 1.5 !important;
+        display: block !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    #mb-landing-page p { padding: 0 !important; line-height: 1.6 !important; }
+    #mb-landing-page br { display: none !important; }
+    #mb-landing-page ul, #mb-landing-page li { list-style: none !important; padding: 0 !important; margin: 0 !important; }
+    #mb-landing-page a { text-decoration: none !important; transition: all 0.3s ease; }
+    
+    :root { --mb-navy: #002B5B; --mb-orange: #FF6B00; --mb-whatsapp: #25D366; }
+    .mb-bg-navy { background-color: #002B5B !important; }
+    .mb-bg-orange { background-color: #FF6B00 !important; }
+    .mb-bg-whatsapp { background-color: #25D366 !important; }
+    .mb-text-orange { color: #FF6B00 !important; }
+    .mb-text-navy { color: #002B5B !important; }
+    .mb-border-orange { border-color: #FF6B00 !important; }
+    
+    @keyframes mb-pulse { 
+        0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 
+        70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 
+        100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } 
+    }
+    .mb-animate-whatsapp { animation: mb-pulse 2s infinite !important; }
+    .mb-hero-curve { border-bottom-left-radius: 60px; border-bottom-right-radius: 60px; }
+    .mb-card-shadow { box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important; }
+    .mb-input { border: 1px solid #e5e7eb !important; border-radius: 12px !important; padding: 12px 16px !important; width: 100% !important; font-size: 18px !important; font-weight: 600 !important; outline: none !important; }
+    
+    /* FORÇAR VISIBILIDADE DAS SEÇÕES */
+    .mb-section { 
+        display: block !important; 
+        visibility: visible !important; 
+        opacity: 1 !important; 
+        position: relative !important; 
+        width: 100% !important;
+        clear: both !important;
+    }
+    
+    /* FAQ CUSTOMIZADO */
+    .mb-faq-item { overflow: hidden; transition: all 0.3s ease; }
+    .mb-faq-content { 
+        max-height: 0; 
+        overflow: hidden; 
+        transition: max-height 0.4s cubic-bezier(0, 1, 0, 1); 
+    }
+    .mb-faq-item.active .mb-faq-content { 
+        max-height: 500px; 
+        transition: max-height 0.4s ease-in-out; 
+    }
+    .mb-faq-trigger { cursor: pointer !important; user-select: none; }
+</style>
+
+<!-- CONFIGURAÇÃO TAILWIND JIT -->
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { sans: ['Inter', 'sans-serif'] },
+        colors: { navy: '#002B5B', orange: '#FF6B00', whatsapp: '#25D366' }
+      }
+    }
+  }
+</script>
+
+<div id="mb-landing-page" class="w-full overflow-x-hidden font-sans">
+    
+    <!-- HERO SECTION -->
+    <div class="mb-section mb-bg-navy text-white pt-10 pb-20 px-6 mb-hero-curve relative overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="mb-bg-orange text-white px-4 py-1.5 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest mb-6 inline-block">Consultoria Especializada em Antecipação de FGTS</span>
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">Receba seu dinheiro <span class="mb-text-orange">hoje mesmo</span>, sem burocracia!</h1>
+            <p class="text-base md:text-lg opacity-90 mb-10 font-medium max-w-2xl mx-auto text-center">Atendimento personalizado para negativados e desempregados. Dinheiro na conta via PIX em até 30 minutos.</p>
+            
+            <div class="relative inline-block mb-8">
+                <div class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 mb-border-orange overflow-hidden mx-auto shadow-2xl bg-white">
+                    <img id="avatar-marcelo" src="http://marcelobrasilfgts.local/wp-content/uploads/2026/04/WhatsApp-Image-2026-03-31-at-22.34.00.jpeg" alt="Consultor Marcelo Brasil" class="w-full h-full object-cover object-top" referrerpolicy="no-referrer" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400';">
+                </div>
+                <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 mb-bg-whatsapp text-white text-[9px] font-bold px-4 py-1.5 rounded-full whitespace-nowrap uppercase tracking-tighter shadow-lg border border-white/20">Consultor Marcelo Brasil</div>
+            </div>
+
+            <div class="max-w-md mx-auto">
+                <a href="https://wa.link/8sct8r" target="_blank" rel="noopener noreferrer" class="mb-bg-whatsapp hover:opacity-90 text-white font-bold py-4 px-6 rounded-2xl text-lg shadow-xl transition-all transform hover:scale-105 flex items-center justify-center gap-3 w-full">
+                    <i data-lucide="message-circle" class="w-6 h-6"></i>
+                    Simular pelo WhatsApp
+                </a>
+            </div>
+
+            <!-- Contador de credibilidade -->
+            <div class="flex justify-center gap-8 mt-8 flex-wrap">
+                <div class="text-center">
+                    <p class="text-3xl font-extrabold mb-text-orange">+500</p>
+                    <p class="text-xs text-white/70 uppercase tracking-wide">Clientes Atendidos</p>
+                </div>
+                <div class="w-px bg-white/20 hidden md:block"></div>
+                <div class="text-center">
+                    <p class="text-3xl font-extrabold mb-text-orange">30min</p>
+                    <p class="text-xs text-white/70 uppercase tracking-wide">PIX na Conta</p>
+                </div>
+                <div class="w-px bg-white/20 hidden md:block"></div>
+                <div class="text-center">
+                    <p class="text-3xl font-extrabold mb-text-orange">100%</p>
+                    <p class="text-xs text-white/70 uppercase tracking-wide">Aprovação Online</p>
+                </div>
+            </div>
+
+            <!-- Urgência -->
+            <div class="mt-8 inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 text-sm text-white">
+                <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse inline-block"></span>
+                ⏰ Horário de atendimento: Seg–Sex 08h às 18h | Sáb 08h às 12h
+            </div>
+        </div>
+    </div>
+
+    <!-- SIMULADOR -->
+    <div class="mb-section px-6 -mt-12 relative z-20">
+        <div class="max-w-md mx-auto bg-white rounded-3xl mb-card-shadow p-8 border border-gray-50">
+            <h2 class="text-xl font-bold mb-text-navy mb-6 text-center flex items-center justify-center gap-2">
+                <i data-lucide="calculator" class="w-5 h-5 mb-text-orange"></i>
+                Simulador de Estimativa
+            </h2>
+            <div style="margin-bottom: 1rem;">
+    <label style="display: block; font-size: 14px; font-weight: 600; color: #6b7280; margin-bottom: 8px;">
+        Qual seu saldo total no FGTS?
+    </label>
+    <div style="position: relative; display: flex; align-items: center;">
+        <span style="position: absolute; left: 12px; color: #9ca3af; font-weight: bold; pointer-events: none;">
+            R$
+        </span>
+        
+        <input 
+            id="input-saldo" 
+            type="number" 
+            placeholder="Ex: 5000" 
+            style="width: 100%; padding: 12px 12px 12px 45px; background-color: #f9fafb; border: 2px solid #e5e7eb; border-radius: 8px; outline: none;"
+        >
+    </div>
+</div>
+                <button id="btn-calcular" class="w-full mb-bg-navy text-white font-bold py-4 rounded-xl hover:opacity-90 transition-all shadow-lg text-base">Calcular Estimativa</button>
+                
+                <div id="resultado-container" class="hidden mt-6 p-6 mb-bg-navy rounded-2xl border-2 mb-border-orange text-center shadow-inner">
+                    <p class="text-sm text-white opacity-80 mb-1">Você pode receber aproximadamente:</p>
+                    <p id="valor-estimativa" class="text-4xl font-extrabold mb-text-orange"></p>
+                    <p class="text-[10px] text-white opacity-60 mt-4 leading-tight italic">*O valor real depende da simulação oficial no sistema da Facta. Sujeito a análise de saldo e taxas vigentes.</p>
+                    <a href="https://wa.link/8sct8r" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center justify-center gap-2 mb-bg-whatsapp hover:opacity-90 text-white font-bold py-3 px-6 rounded-2xl text-base shadow-lg transition-all transform hover:scale-105 w-full">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        Consultar pelo WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DIFERENCIAIS -->
+    <div class="mb-section bg-gray-50 py-16 px-6" style="margin: 80px 0 !important; display: block !important;">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-extrabold mb-text-navy text-center mb-10">Por que escolher minha consultoria?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-3xl mb-card-shadow text-center transition-all hover:-translate-y-2">
+                    <div class="w-20 h-20 mb-bg-navy text-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i data-lucide="users" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-text-navy mb-3">Atendimento 100% Humano</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Nada de robôs. Você fala diretamente comigo para tirar todas as suas dúvidas e ter segurança.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-3xl mb-card-shadow text-center transition-all hover:-translate-y-2">
+                    <div class="w-20 h-20 mb-bg-orange text-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i data-lucide="shield-check" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-text-navy mb-3">Especialista em Saldo Retido</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Experiência comprovada na liberação de saldos que outros consultores não conseguem liberar.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-3xl mb-card-shadow text-center transition-all hover:-translate-y-2">
+                    <div class="w-20 h-20 mb-bg-whatsapp text-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i data-lucide="check-circle-2" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-text-navy mb-3">Multa de 40% Protegida</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Transparência total: a multa de 40% continua sendo sua em caso de demissão sem justa causa.</p>
+                </div>
+            </div>
+
+            <!-- Parceiros e CTA -->
+            <div class="mt-14 text-center">
+                <p class="text-sm text-gray-400 uppercase tracking-widest font-semibold mb-5">Operação realizada com segurança via</p>
+                <div class="flex justify-center items-center gap-8 flex-wrap mb-10">
+                    <div class="bg-white rounded-2xl shadow-md px-6 py-4 flex items-center gap-3 border border-gray-100">
+                        <div class="w-8 h-8 bg-[#004B87] rounded-full flex items-center justify-center">
+                            <span class="text-white font-extrabold text-xs">F</span>
+                        </div>
+                        <div class="text-left">
+                            <p class="font-extrabold mb-text-navy text-sm leading-none">Facta</p>
+                            <p class="text-[10px] text-gray-400">Financeira</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-md px-6 py-4 flex items-center gap-3 border border-gray-100">
+                        <div class="w-8 h-8 bg-[#0066CC] rounded-full flex items-center justify-center">
+                            <span class="text-white font-extrabold text-xs">C</span>
+                        </div>
+                        <div class="text-left">
+                            <p class="font-extrabold mb-text-navy text-sm leading-none">Caixa</p>
+                            <p class="text-[10px] text-gray-400">Econômica Federal</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://wa.link/8sct8r" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 mb-bg-orange hover:opacity-90 text-white font-bold py-4 px-10 rounded-2xl text-lg shadow-lg transition-all transform hover:scale-105">
+                    <i data-lucide="message-circle" class="w-6 h-6"></i>
+                    Quero contratar agora!
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- DEPOIMENTOS -->
+    <div class="mb-section mb-bg-navy py-16 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-white text-center mb-12">O que dizem meus clientes em Teresina</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Depoimento 1 -->
+                <div class="flex flex-col">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-full border-2 mb-border-orange bg-[#FF8C00] flex items-center justify-center shrink-0">
+                            <span class="text-white font-bold text-sm">JS</span>
+                        </div>
+                        <div>
+                            <p class="text-white font-bold text-sm">João Silva</p>
+                            <p class="mb-text-orange text-[10px] uppercase font-bold">Dirceu, Teresina</p>
+                        </div>
+                    </div>
+                    <div class="bg-[#DCF8C6] p-4 rounded-2xl rounded-tl-none shadow-md relative">
+                        <p class="text-gray-800 text-sm italic">"Marcelo, o dinheiro caiu agora! Muito obrigado pela agilidade, resolveu minha vida aqui no Dirceu. Nota 10!"</p>
+                        <div class="flex justify-end mt-1 items-center gap-1">
+                            <span class="text-[10px] text-gray-500">14:20</span>
+                            <div class="flex text-blue-500"><i data-lucide="check-circle-2" class="w-3 h-3 fill-current"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Depoimento 2 -->
+                <div class="flex flex-col">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-full border-2 mb-border-orange bg-[#003366] flex items-center justify-center shrink-0">
+                            <span class="text-white font-bold text-sm">MO</span>
+                        </div>
+                        <div>
+                            <p class="text-white font-bold text-sm">Maria Oliveira</p>
+                            <p class="mb-text-orange text-[10px] uppercase font-bold">Centro, Teresina</p>
+                        </div>
+                    </div>
+                    <div class="bg-[#DCF8C6] p-4 rounded-2xl rounded-tl-none shadow-md relative">
+                        <p class="text-gray-800 text-sm italic">"Conseguiu liberar meu saldo que estava retido há meses. Super recomendo o trabalho do Marcelo!"</p>
+                        <div class="flex justify-end mt-1 items-center gap-1">
+                            <span class="text-[10px] text-gray-500">10:45</span>
+                            <div class="flex text-blue-500"><i data-lucide="check-circle-2" class="w-3 h-3 fill-current"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Depoimento 3 -->
+                <div class="flex flex-col">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-full border-2 mb-border-orange bg-[#28A745] flex items-center justify-center shrink-0">
+                            <span class="text-white font-bold text-sm">RS</span>
+                        </div>
+                        <div>
+                            <p class="text-white font-bold text-sm">Ricardo Santos</p>
+                            <p class="mb-text-orange text-[10px] uppercase font-bold">Mocambinho, Teresina</p>
+                        </div>
+                    </div>
+                    <div class="bg-[#DCF8C6] p-4 rounded-2xl rounded-tl-none shadow-md relative">
+                        <p class="text-gray-800 text-sm italic">"Fiz a simulação e em menos de 30 min o PIX tava na conta. Atendimento humano de verdade, sem enrolação."</p>
+                        <div class="flex justify-end mt-1 items-center gap-1">
+                            <span class="text-[10px] text-gray-500">16:12</span>
+                            <div class="flex text-blue-500"><i data-lucide="check-circle-2" class="w-3 h-3 fill-current"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PASSO A PASSO -->
+    <div class="mb-section bg-white py-16 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-2xl font-bold mb-text-navy text-center mb-12">Como contratar? Passo a Passo</h2>
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden p-8 md:p-12 flex flex-col md:flex-row items-center gap-12 border border-gray-100">
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <img src="http://marcelobrasilfgts.local/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-01-at-13.47.34.jpeg" class="max-h-[400px] md:max-h-[550px] object-contain rounded-2xl shadow-lg border-4 border-gray-100" alt="Aplicativo FGTS" referrerpolicy="no-referrer" onerror="this.src='https://picsum.photos/seed/fgts-app/600/1200';">
+                </div>
+                <div class="w-full md:w-1/2 flex flex-col justify-center">
+                    <div id="mb-slide-content" class="min-h-[300px] flex flex-col justify-center transition-all duration-300">
+                        <h3 id="mb-slide-title" class="text-2xl md:text-4xl font-bold mb-text-navy mb-6 leading-tight">1. No app do FGTS, escolha a opção do Saque Aniversário do FGTS</h3>
+                        <p id="mb-slide-desc" class="text-gray-600 text-lg md:text-xl mb-8 leading-relaxed">Confira as informações sobre a modalidade e selecione a opção do Saque Aniversário, aceitando os termos e condições.</p>
+                        <div id="mb-slide-btn">
+                            <a href="https://play.google.com/store/apps/details?id=br.gov.caixa.fgts.trabalhador" target="_blank" class="mb-text-orange font-bold text-xl hover:underline flex items-center gap-2 mb-10">
+                                <i data-lucide="smartphone" class="w-6 h-6"></i> Baixe o app FGTS
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 justify-center md:justify-start mt-4">
+                        <button id="btn-prev" class="text-gray-400 hover:mb-text-orange p-2 bg-gray-50 rounded-full transition-colors">
+                            <i data-lucide="chevron-left" class="w-8 h-8"></i>
+                        </button>
+                        <div id="mb-dots" class="flex gap-3">
+                            <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg mb-bg-orange text-white shadow-lg transform scale-110">1</div>
+                            <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg bg-gray-200 text-gray-500 cursor-pointer">2</div>
+                            <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg bg-gray-200 text-gray-500 cursor-pointer">3</div>
+                            <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg bg-gray-200 text-gray-500 cursor-pointer">4</div>
+                        </div>
+                        <button id="btn-next" class="text-gray-400 hover:mb-text-orange p-2 bg-gray-50 rounded-full transition-colors">
+                            <i data-lucide="chevron-right" class="w-8 h-8"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="mb-section bg-gray-50 py-16 px-6">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-2xl font-bold mb-text-navy text-center mb-8 flex items-center justify-center gap-2">
+                <i data-lucide="help-circle" class="w-6 h-6 mb-text-orange"></i> Dúvidas Frequentes
+            </h2>
+            <div class="space-y-4">
+                <div class="mb-faq-item bg-white p-4 rounded-xl border border-gray-100 cursor-pointer group shadow-sm">
+                    <div class="mb-faq-trigger font-bold mb-text-navy flex justify-between items-center text-sm md:text-base">
+                        Estou negativado, posso fazer?
+                        <i data-lucide="chevron-right" class="w-4 h-4 transition-transform mb-faq-icon"></i>
+                    </div>
+                    <div class="mb-faq-content text-gray-600 mt-2 text-sm leading-relaxed">
+                        <p>Sim! Como a garantia do pagamento é o seu próprio saldo do FGTS, não fazemos consulta ao SPC ou Serasa. O crédito é liberado mesmo para quem está com o nome sujo.</p>
+                    </div>
+                </div>
+                <div class="mb-faq-item bg-white p-4 rounded-xl border border-gray-100 cursor-pointer group shadow-sm">
+                    <div class="mb-faq-trigger font-bold mb-text-navy flex justify-between items-center text-sm md:text-base">
+                        Vou perder minha multa de 40% se for demitido?
+                        <i data-lucide="chevron-right" class="w-4 h-4 transition-transform mb-faq-icon"></i>
+                    </div>
+                    <div class="mb-faq-content text-gray-600 mt-2 text-sm leading-relaxed">
+                        <p>Não. A multa de 40% é calculada sobre o valor total que a empresa depositou, e ela continua sendo sua. Se você for demitido sem justa causa, você saca o valor integralmente.</p>
+                    </div>
+                </div>
+                <div class="mb-faq-item bg-white p-4 rounded-xl border border-gray-100 cursor-pointer group shadow-sm">
+                    <div class="mb-faq-trigger font-bold mb-text-navy flex justify-between items-center text-sm md:text-base">
+                        Quanto tempo demora para o dinheiro cair?
+                        <i data-lucide="chevron-right" class="w-4 h-4 transition-transform mb-faq-icon"></i>
+                    </div>
+                    <div class="mb-faq-content text-gray-600 mt-2 text-sm leading-relaxed">
+                        <p>O processo é 100% digital e muito rápido. Após a aprovação e a biometria facial, o dinheiro costuma cair na sua conta via PIX ou transferência em até 30 minutos (dentro do horário bancário).</p>
+                    </div>
+                </div>
+                <div class="mb-faq-item bg-white p-4 rounded-xl border border-gray-100 cursor-pointer group shadow-sm">
+                    <div class="mb-faq-trigger font-bold mb-text-navy flex justify-between items-center text-sm md:text-base">
+                        O que acontece se eu for demitido no Saque-Aniversário?
+                        <i data-lucide="chevron-right" class="w-4 h-4 transition-transform mb-faq-icon"></i>
+                    </div>
+                    <div class="mb-faq-content text-gray-600 mt-2 text-sm leading-relaxed">
+                        <p>Você recebe sua multa de 40% normalmente. A única diferença é que o saldo restante do FGTS você continua recebendo em parcelas anuais, em vez de sacar tudo de uma vez.</p>
+                    </div>
+                </div>
+                <div class="mb-faq-item bg-white p-4 rounded-xl border border-gray-100 cursor-pointer group shadow-sm">
+                    <div class="mb-faq-trigger font-bold mb-text-navy flex justify-between items-center text-sm md:text-base">
+                        É seguro mandar meus dados?
+                        <i data-lucide="chevron-right" class="w-4 h-4 transition-transform mb-faq-icon"></i>
+                    </div>
+                    <div class="mb-faq-content text-gray-600 mt-2 text-sm leading-relaxed">
+                        <p>Totalmente seguro. Como Consultor Financeiro Autorizado, seus dados são usados exclusivamente para a simulação oficial no sistema da Facta e da Caixa Econômica. Seguimos rigorosamente a LGPD.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="mb-section mb-bg-navy text-white pt-16 pb-8 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            <div>
+                <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                    <i data-lucide="shield-check" class="mb-text-orange w-6 h-6"></i> Marcelo Brasil
+                </h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Consultoria especializada em antecipação de FGTS. Ajudamos trabalhadores a resgatarem seu saldo de forma rápida, segura e 100% online.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6">Links Rápidos</h4>
+                <ul class="space-y-3 text-gray-400 text-sm">
+                    <li><a href="#" class="hover:mb-text-orange transition-colors">Simulador de Saldo</a></li>
+                    <li><a href="#" class="hover:mb-text-orange transition-colors">Como Funciona</a></li>
+                    <li><a href="#" class="hover:mb-text-orange transition-colors">Dúvidas Frequentes</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6">Contato</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="message-circle" class="w-5 h-5 mb-text-whatsapp shrink-0"></i>
+                        <a href="https://wa.link/8sct8r" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">(86) 98894-9544<br>Clique para falar agora</a>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="map-pin" class="w-5 h-5 mb-text-orange shrink-0"></i>
+                        <span>Teresina - Piauí<br>Atendimento em todo o Brasil</span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6">Siga-nos</h4>
+                <div class="flex gap-4">
+                    <a href="https://wa.link/8sct8r" target="_blank" class="bg-white/10 p-3 rounded-full hover:mb-bg-whatsapp transition-all text-white"><i data-lucide="message-circle" class="w-5 h-5"></i></a>
+                    <a href="https://www.instagram.com/marcelobrasilconsultor" target="_blank" class="bg-white/10 p-3 rounded-full hover:mb-bg-orange transition-all text-white"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61576454917042" target="_blank" class="bg-white/10 p-3 rounded-full hover:mb-bg-orange transition-all text-white"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-white/10 pt-8 text-center text-gray-400 text-sm">
+            <p class="text-xs text-gray-500 mb-4 max-w-4xl mx-auto">AVISO LEGAL: A antecipação do Saque-Aniversário FGTS é uma modalidade de empréstimo. Marcelo Brasil atua como correspondente bancário autorizado.</p>
+            <p>© 2026 Marcelo Brasil - Consultoria Financeira. Todos os direitos reservados.</p>
+        </div>
+    </div>
+
+    <!-- WHATSAPP FLUTUANTE -->
+    <a href="https://wa.link/8sct8r" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 mb-bg-whatsapp text-white p-4 rounded-full shadow-2xl z-50 mb-animate-whatsapp flex items-center justify-center">
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+    </a>
+</div>
+
+<!-- LÓGICA DE FUNCIONAMENTO (JAVASCRIPT VANILLA) -->
+<script>
+(function() {
+    console.log("MB-Landing: Script Iniciado");
+
+    const slides = [
+        { t: "1. No app do FGTS, escolha a opção do Saque Aniversário", d: "Confira as informações sobre a modalidade e selecione a opção do Saque Aniversário.", b: "Baixe o app FGTS", l: "https://play.google.com/store/apps/details?id=br.gov.caixa.fgts.trabalhador", i: "smartphone" },
+        { t: "2. No app do FGTS, simule o valor da parcela", d: "Verifique o valor disponível para antecipação conforme seu saldo atual.", b: "Baixe o app FGTS", l: "https://play.google.com/store/apps/details?id=br.gov.caixa.fgts.trabalhador", i: "info" },
+        { t: "3. Autorize a Facta Financeira a consultar seu FGTS", d: "Autorize a consulta para que possamos verificar sua margem com segurança.", b: "Baixe o app FGTS", l: "https://play.google.com/store/apps/details?id=br.gov.caixa.fgts.trabalhador", i: "shield-check" },
+        { t: "4. Finalize sua contratação com o Marcelo Brasil", d: "Me chame no WhatsApp para finalizarmos o seu resgate. O dinheiro cai em minutos!", b: "Falar no WhatsApp", l: "https://wa.link/8sct8r", i: "message-circle" }
+    ];
+    let cur = 0;
+
+    function updateSlider() {
+        const content = document.getElementById('mb-slide-content');
+        if(!content) return;
+        const data = slides[cur];
+        content.style.opacity = '0';
+        setTimeout(() => {
+            document.getElementById('mb-slide-title').innerText = data.t;
+            document.getElementById('mb-slide-desc').innerText = data.d;
+            const isLast = cur === 3;
+            document.getElementById('mb-slide-btn').innerHTML = `<a href="${data.l}" target="_blank" class="${isLast ? 'text-green-500' : 'mb-text-orange'} font-bold text-xl hover:underline flex items-center gap-2 mb-10"><i data-lucide="${data.i}" class="w-6 h-6"></i> ${data.b}</a>`;
+            const dots = document.getElementById('mb-dots');
+            if(dots) {
+                dots.innerHTML = slides.map((_, i) => `<div onclick="window.mbGoToStep(${i})" class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg cursor-pointer transition-all ${i===cur ? 'mb-bg-orange text-white shadow-lg scale-110':'bg-gray-200 text-gray-500'}">${i+1}</div>`).join('');
+            }
+            content.style.opacity = '1';
+            if(window.lucide) lucide.createIcons();
+        }, 150);
+    }
+
+    window.mbGoToStep = function(i) { cur = i; updateSlider(); };
+
+    function initModules() {
+        if(window.mb_initialized) return;
+        console.log("MB-Landing: Inicializando...");
+
+        const btnCalc = document.getElementById('btn-calcular');
+        if(btnCalc) {
+            btnCalc.addEventListener('click', function() {
+                const val = parseFloat(document.getElementById('input-saldo').value);
+                if(val > 0) {
+                    const estimativa = val * 0.70;
+                    document.getElementById('valor-estimativa').innerText = estimativa.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
+                    document.getElementById('resultado-container').classList.remove('hidden');
+                    setTimeout(() => { document.getElementById('resultado-container').scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 200);
+                }
+            });
+        }
+
+        const next = document.getElementById('btn-next');
+        const prev = document.getElementById('btn-prev');
+        if(next) next.addEventListener('click', () => { cur = (cur+1)%4; updateSlider(); });
+        if(prev) prev.addEventListener('click', () => { cur = (cur+3)%4; updateSlider(); });
+        updateSlider();
+
+        document.querySelectorAll('.mb-faq-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const act = this.classList.contains('active');
+                document.querySelectorAll('.mb-faq-item').forEach(el => el.classList.remove('active'));
+                if(!act) this.classList.add('active');
+                if(window.lucide) lucide.createIcons();
+            });
+        });
+
+        if(window.lucide) lucide.createIcons();
+        window.mb_initialized = true;
+        console.log("MB-Landing: Concluído.");
+    }
+
+    const checker = setInterval(() => {
+        if(document.getElementById('mb-landing-page')) {
+            initModules();
+            clearInterval(checker);
+        }
+    }, 500);
+
+    window.addEventListener('load', initModules);
+    document.addEventListener('DOMContentLoaded', initModules);
+})();
+</script>
