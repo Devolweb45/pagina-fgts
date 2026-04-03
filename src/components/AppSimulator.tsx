@@ -8,6 +8,7 @@ import {
   MessageCircle,
   Smartphone
 } from 'lucide-react';
+import WhatsAppButton from './WhatsAppButton';
 
 const screens = [
   {
@@ -202,15 +203,11 @@ export default function AppSimulator() {
                 Agora o Marcelo Brasil já consegue liberar o seu dinheiro no sistema.
               </p>
               
-              <a
-                href="https://wa.link/8sct8r"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-4 bg-white text-whatsapp rounded-2xl font-black text-sm shadow-xl flex items-center justify-center gap-2 hover:scale-105 transition-transform"
-              >
-                <MessageCircle className="w-5 h-5" />
-                CONTRATAR AGORA
-              </a>
+              <WhatsAppButton 
+                variant="primary" 
+                tooltipText="Simular no WhatsApp" 
+                className="bg-white text-whatsapp hover:bg-gray-100" 
+              />
             </motion.div>
           )}
         </AnimatePresence>

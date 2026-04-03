@@ -16,6 +16,7 @@ import {
   Facebook
 } from 'lucide-react';
 import AppSimulator from './components/AppSimulator';
+import WhatsAppButton from './components/WhatsAppButton';
 
 const slides = [
   {
@@ -158,16 +159,8 @@ export default function App() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-4 px-4">
-            <a 
-              href="https://wa.link/8sct8r" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-whatsapp hover:bg-opacity-90 text-white font-bold py-4 md:py-5 px-4 md:px-8 rounded-2xl text-lg md:text-xl shadow-lg transition-all transform hover:scale-105 flex items-center justify-center gap-3 w-full"
-            >
-              <MessageCircle className="w-6 h-6" />
-              Simular pelo WhatsApp
-            </a>
+          <div className="flex flex-col gap-4 px-4 max-w-md mx-auto">
+            <WhatsAppButton variant="primary" />
           </div>
 
           {/* Contador de credibilidade */}
@@ -242,15 +235,11 @@ export default function App() {
                   <p className="text-[10px] text-white opacity-60 mt-4 leading-tight italic">
                     *O valor real depende da simulação oficial no sistema da Facta. Sujeito a análise de saldo e taxas vigentes.
                   </p>
-                  <a
-                    href="https://wa.link/8sct8r"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-5 inline-flex items-center justify-center gap-2 bg-whatsapp hover:bg-opacity-90 text-white font-bold py-3 px-6 rounded-2xl text-base shadow-lg transition-all transform hover:scale-105 w-full"
-                  >
-                    <MessageCircle className="w-5 h-5" />
-                    Consultar pelo WhatsApp
-                  </a>
+                  <WhatsAppButton 
+                    variant="primary" 
+                    tooltipText="Simular no WhatsApp" 
+                    className="mt-5" 
+                  />
                 </motion.div>
               )}
             </AnimatePresence>
@@ -305,15 +294,10 @@ export default function App() {
               </div>
             </div>
           </div>
-          <a
-            href="https://wa.link/8sct8r"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-orange hover:bg-opacity-90 text-white font-bold py-4 px-10 rounded-2xl text-lg shadow-lg transition-all transform hover:scale-105"
-          >
-            <MessageCircle className="w-6 h-6" />
-            Quero contratar agora!
-          </a>
+          <WhatsAppButton 
+            variant="secondary" 
+            className="w-auto inline-flex" 
+          />
         </div>
         </div>
       </section>
@@ -383,15 +367,11 @@ export default function App() {
                       {slides[currentSlide].desc}
                     </p>
                     {currentSlide === 3 ? (
-                      <a 
-                        href={slides[currentSlide].link} 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-whatsapp hover:bg-opacity-90 text-white font-bold py-4 px-8 rounded-2xl text-lg shadow-lg transition-all transform hover:scale-105 flex items-center justify-center gap-3 w-full md:w-auto mb-10"
-                      >
-                        <MessageCircle className="w-6 h-6" />
-                        Simular pelo WhatsApp
-                      </a>
+                      <WhatsAppButton 
+                        variant="primary" 
+                        tooltipText="Receba hoje via PIX!" 
+                        className="mb-10" 
+                      />
                     ) : (
                       <a 
                         href={slides[currentSlide].link} 
@@ -543,18 +523,8 @@ export default function App() {
         </div>
       </footer>
 
-      {/* Botão WhatsApp Flutuante */}
-      <a 
-        href="https://wa.link/8sct8r" 
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 bg-whatsapp text-white p-4 rounded-full shadow-2xl z-50 animate-whatsapp flex items-center justify-center group"
-      >
-        <MessageCircle className="w-8 h-8" />
-        <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-500 whitespace-nowrap font-bold">
-          Falar com o Consultor Agora
-        </span>
-      </a>
+      {/* Botão WhatsApp Flutuante Magnético */}
+      <WhatsAppButton variant="floating" />
     </div>
   );
 }
