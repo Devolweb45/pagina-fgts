@@ -15,6 +15,7 @@ import {
   Instagram,
   Facebook
 } from 'lucide-react';
+import AppSimulator from './components/AppSimulator';
 
 const slides = [
   {
@@ -359,17 +360,9 @@ export default function App() {
           <h2 className="text-2xl font-bold text-navy text-center mb-12">Como contratar? Passo a Passo</h2>
           
           <div className="relative bg-white rounded-3xl shadow-xl overflow-hidden p-8 md:p-12 min-h-[500px] flex flex-col md:flex-row items-center gap-12">
-            {/* Imagem TOTALMENTE FIXA (Não muda com os botões) */}
-            <div className="w-full md:w-1/2 flex justify-center">
-              <img 
-                src="/passo-a-passo-fgts.jpg" 
-                className="max-h-[400px] md:max-h-[550px] object-contain rounded-2xl shadow-lg border-4 border-gray-100" 
-                alt="Aplicativo FGTS"
-                referrerPolicy="no-referrer"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = "https://picsum.photos/seed/fgts-app/600/1200";
-                }}
-              />
+            {/* Simulador Animado (Auto-run) */}
+            <div className="w-full md:w-1/2 flex justify-center items-center py-8">
+              <AppSimulator />
             </div>
 
             {/* Conteúdo Dinâmico (Apenas o texto muda) */}
